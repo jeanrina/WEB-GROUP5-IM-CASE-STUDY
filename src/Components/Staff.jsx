@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 import { FaUser, FaHome, FaCog, FaSignOutAlt } from 'react-icons/fa';
 import './Staff.css';
 
+const staffData = [
+  { clinicNumber: 'PH-CLN-00123', name: 'John Doe', address: '123 Elm St, Springfield', contactNumber: '555-1234', unit: 'See Patients' },
+  { clinicNumber: 'PH-CLN-00456', name: 'John Doe', address: '123 Elm St, Springfield', contactNumber: '555-1234', unit: 'See Patients' },
+  { clinicNumber: 'PH-CLN-00789', name: 'John Doe', address: '123 Elm St, Springfield', contactNumber: '555-1234', unit: 'See Patients' },
+  { clinicNumber: 'PH-CLN-00789', name: 'John Doe', address: '123 Elm St, Springfield', contactNumber: '555-1234', unit: 'See Patients' },
+  { clinicNumber: 'PH-CLN-00789', name: 'John Doe', address: '123 Elm St, Springfield', contactNumber: '555-1234', unit: 'See Patients' },
+  { clinicNumber: 'PH-CLN-00789', name: 'John Doe', address: '123 Elm St, Springfield', contactNumber: '555-1234', unit: 'See Patients' },
+  { clinicNumber: 'PH-CLN-00789', name: 'John Doe', address: '123 Elm St, Springfield', contactNumber: '555-1234', unit: 'See Patients' }
+];
+
 const Staff = () => {
   return (
     <Box sx={{ height: '100vh', width: '100%', display: 'flex' }}>
@@ -73,7 +83,15 @@ const Staff = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {/* Populate with data */}
+                {staffData.map((staff, index) => (
+                  <TableRow key={index}>
+                    <TableCell>{staff.clinicNumber}</TableCell>
+                    <TableCell>{staff.name}</TableCell>
+                    <TableCell>{staff.address}</TableCell>
+                    <TableCell>{staff.contactNumber}</TableCell>
+                    <TableCell><Button variant="contained" color="primary" size="small">See Patients</Button></TableCell>
+                  </TableRow>
+                ))}
               </TableBody>
             </Table>
           </Box>
