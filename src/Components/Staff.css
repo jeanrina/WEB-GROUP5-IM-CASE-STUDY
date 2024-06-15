@@ -1,84 +1,104 @@
-.staff-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #f0f8ff;
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
   }
   
-  .search-section, .details-section {
+  .search-container {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
   }
   
-  .search-box {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  .search-box input {
+  .search-container .MuiTextField-root {
     flex: 1;
-    padding: 8px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
   }
   
-  .search-box button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  .search-container .MuiButton-root {
+    margin-left: 10px;
   }
   
-  .search-box button:hover {
-    background-color: #0056b3;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  table th, table td {
-    padding: 12px;
-    border: 1px solid #ccc;
-  }
-  
-  .details-section {
+  /* Sidebar Styles */
+  .sidebar {
+    width: 80px;
+    background: linear-gradient(to bottom, #2CAFA4, #0194D3);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
   }
   
-  .staff-details, .qualification-details {
-    flex: 1;
-    margin-right: 10px;
-  }
-  
-  .staff-details h3, .qualification-details h3 {
-    margin-bottom: 10px;
-  }
-  
-  .staff-details input, .qualification-details input {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .staff-details button, .qualification-details button {
-    padding: 8px 16px;
-    margin-right: 10px;
-    background-color: #28a745;
+  .sidebar .MuiButton-root {
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 30px;
+    margin-top: 30px;
   }
   
-  .staff-details button:hover, .qualification-details button:hover {
-    background-color: #3820c0;
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #E7F3F5;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: auto;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+  
+  .nav-buttons .MuiButton-root {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+  }
+  
+  .nav-buttons .active {
+    border-bottom: 2px solid #007bff;
+  }
+  
+  /* Section Styles */
+  .supplies-section, .staff-section, .qualification-section, .work-experience-section, .staff-details-form, .qualification-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .supplies-section .MuiTypography-root, .staff-section .MuiTypography-root, .qualification-section .MuiTypography-root, .work-experience-section .MuiTypography-root, .staff-details-form .MuiTypography-root, .qualification-form .MuiTypography-root {
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .staff-details-form .MuiTextField-root, .qualification-form .MuiTextField-root {
+    margin-bottom: 10px;
+  }
+  
+  .staff-details-form .MuiButton-root, .qualification-form .MuiButton-root {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  /* Table Styles */
+  .MuiTable-root {
+    margin-top: 20px;
+  }
+  
+  .MuiTableHead-root .MuiTableCell-root {
+    font-weight: bold;
+  }
+  
+  /* Back Button */
+  .back-button {
+    align-self: flex-end;
+    margin-bottom: 20px;
   }
   
