@@ -2,8 +2,7 @@ import React from 'react';
 import { Box, Button, Typography, TextField } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaUser, FaHome, FaCog, FaSignOutAlt } from 'react-icons/fa';
-import './Staff2.css'; // Ensure this path is correct
-
+import './Staff2.css';
 const Staff2 = () => {
     const navigate = useNavigate(); 
   return (
