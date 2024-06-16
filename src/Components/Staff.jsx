@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Typography, TextField, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaUser, FaHome, FaCog, FaSignOutAlt } from 'react-icons/fa';
 import './Staff.css';
 
@@ -15,6 +15,7 @@ const staffData = [
 ];
 
 const Staff = () => {
+  const navigate = useNavigate(); 
   return (
     <Box sx={{ height: '100vh', width: '100%', display: 'flex' }}>
       {/* Sidebar Navigation */}
@@ -149,7 +150,10 @@ const Staff = () => {
             <Button variant="outlined" color="secondary" size="small" sx={{ marginTop: '10px' }}>Delete</Button>
           </Box>
         </Box>
-        <Button onClick={() => window.history.back()} sx={{ alignSelf: 'flex-end', marginBottom: '20px' }}>BACK</Button>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
+          <Button onClick={() => window.history.back()} sx={{ alignSelf: 'flex-start' }}>BACK</Button>
+          <Button onClick={() => alert('Next button clicked')} sx={{ alignSelf: 'flex-end' }}>NEXT</Button>
+        </Box>
       </Box>
     </Box>
   );

@@ -4,10 +4,11 @@ import LoginPage from './Components/Login.jsx';
 import RegisterPage from './Components/Register.jsx';
 import Dashboard from './Components/Dashboard.jsx';
 import WardDetails from './Components/WardDetails.jsx';
-import Staff from './Components/Staff.jsx'; // Import the Staff component
+import Staff from './Components/Staff.jsx';
+import Staff2 from './Components/Staff2.jsx';
 import Supplies from './Components/Supplies.jsx';
 import WardRequisitionForm from './Components/WardRequisitionForm.jsx';
-import ViewRequisitions from './Components/ViewRequisitions.jsx'; // Import the new component
+import ViewRequisitions from './Components/ViewRequisitions.jsx';
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/ward" element={<WardDetails />} />
-        <Route path="/staff" element={<Staff />} /> {/* Add the Staff route */}
+        <Route path="/staff" element={<Staff />} />
+        <Route path="/staff2" element={<Staff2 />} />
         <Route path="/supplies" element={<Supplies />} />
         <Route path="/supplies/ward-requisition" element={<WardRequisitionForm />} />
-        <Route path="/view-requisitions" element={<ViewRequisitions />} /> {/* Add the new route */}
+        <Route path="/view-requisitions" element={<ViewRequisitions />} />
       </Routes>
     </Router>
   );
